@@ -1,0 +1,26 @@
+shader TensorBufferToTextureR_ComputeFX : ComputeShaderBase
+{
+    RWTexture2D<float> Texture;
+    StructuredBuffer<float> TensorBuffer;
+
+    float2 ImageSize;
+
+    int normMethod;
+
+    override void Compute()
+    {
+        uint2 id = streams.DispatchThreadId.xy;
+
+        // Texture element output
+        uint off = ((ImageSize.y - id.y - 1) * ImageSize.x + id.x);
+
+        float c = TensorBuffer[off];
+
+        if(normMethod == 1)
+            c = c *.5 + .5;
+        else if(normMethod == 2)
+            c /= 255.0;
+
+        Texture[id.xy] = c;
+    }
+};

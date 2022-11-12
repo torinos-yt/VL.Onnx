@@ -1,0 +1,44 @@
+shader TextureToTensorBuffer_ComputeFX : ComputeShaderBase
+{
+    Texture2D<float4> Texture;
+    RWStructuredBuffer<float> TensorBuffer;
+
+    SamplerState Sampler;
+
+    float2 ImageSize;
+
+    int normMethod;
+
+    override void Compute()
+    {
+        uint2 id = streams.DispatchThreadId.xy;
+
+        // UV (vertically flipped)
+        float2 uv = float2(0.5 + id.x, ImageSize.y - 0.5 - id.y) / ImageSize;
+
+        // UV gradients
+        float2 duv_dx = float2(1.0 / ImageSize.x, 0);
+        float2 duv_dy = float2(0, -1.0 / ImageSize.y);
+
+        // Texture sample
+        // Value range : [0, 1]
+        float3 rgb = Texture.SampleGrad(Sampler, uv, duv_dx, duv_dy).rgb;
+
+        if(normMethod == 1)
+        {
+            rgb *= 2;
+            rgb -= 1;
+        }
+        else if(normMethod == 2)
+        {
+            rgb *= 255;
+        }
+
+        // Tensor element output
+        uint offs = (id.y * ImageSize.x + id.x);
+        uint plane = ImageSize.x * ImageSize.y;
+        TensorBuffer[plane * 0 + offs] = rgb.r;
+        TensorBuffer[plane * 1 + offs] = rgb.g;
+        TensorBuffer[plane * 2 + offs] = rgb.b;
+    }
+};
