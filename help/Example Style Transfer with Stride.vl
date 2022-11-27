@@ -29,7 +29,7 @@
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="197,1052,80,19" Id="QAn3nD4WzHfLGffJmfaE9u">
+          <Node Bounds="206,1026,80,19" Id="QAn3nD4WzHfLGffJmfaE9u">
             <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="FirstOrDefault" />
@@ -39,7 +39,7 @@
             <Pin Id="U6uHn80nj1YQAffP9484ra" Name="Output" Kind="StateOutputPin" />
             <Pin Id="M8TKBzkHLl4OiZmWXbJ59H" Name="Result" Kind="OutputPin" />
           </Node>
-          <Pad Id="JEVjrzwoIbEPu8WgkkCWXN" Comment="" Bounds="215,1104,190,158" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="JEVjrzwoIbEPu8WgkkCWXN" Comment="" Bounds="207,1065,190,158" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="172,585,83,26" Id="Su5WYDs3kAJNdfY0P5DCFa">
             <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastSymbolSource="VL.Onnx.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -49,7 +49,7 @@
             <Pin Id="DJMbG6RTcS9PbtbUjGIhSh" Name="Output" Kind="StateOutputPin" />
             <Pin Id="KtlN2z4m8ehLy8TwiTmORV" Name="InputData" Kind="OutputPin" />
           </Node>
-          <Node Bounds="172,791,91,26" Id="IUyTUhYTA1rN1GiobQp1xK">
+          <Node Bounds="172,799,91,26" Id="IUyTUhYTA1rN1GiobQp1xK">
             <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastSymbolSource="VL.Onnx.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="OutputMetaData" />
@@ -61,7 +61,7 @@
           <Node Bounds="172,706,95,26" Id="FNXgJHrx3xANjs6PNuVYvS">
             <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastSymbolSource="VL.Onnx.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="BindInputTexture" />
+              <Choice Kind="OperationCallFlag" Name="BindInput (Texture)" />
             </p:NodeReference>
             <Pin Id="TtnHAWBTFpRNLqtqQUlVev" Name="Input" Kind="StateInputPin" />
             <Pin Id="LnJgdpqd3OuOG8qMErAfz5" Name="NodeData" Kind="InputPin" />
@@ -79,17 +79,17 @@
             <Pin Id="Qk1HJta9KaCOexEUV6Nk49" Name="Output" Kind="StateOutputPin" />
             <Pin Id="Ege6VmuwiLxOP6tHKQ2vSB" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="172,897,103,26" Id="QmHcNgqyULDOQKy6sIxDzk">
+          <Node Bounds="172,905,103,26" Id="QmHcNgqyULDOQKy6sIxDzk">
             <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastSymbolSource="VL.Onnx.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="BindOutputTexture" />
+              <Choice Kind="OperationCallFlag" Name="BindOutput (Texture)" />
             </p:NodeReference>
             <Pin Id="EpwYkuYFIroLF3UWVdMoox" Name="Input" Kind="StateInputPin" />
             <Pin Id="Gm4MPXnxpgULSuL2037K1W" Name="NodeData" Kind="InputPin" />
             <Pin Id="BSa7gnBKLHLMpCt4lfuprW" Name="NormalizeMethod" Kind="InputPin" />
             <Pin Id="NrGXqlI17AcOdJLbMcxGFn" Name="Output" Kind="StateOutputPin" />
           </Node>
-          <Node Bounds="237,843,80,19" Id="VtwAa4xbsHuOhcjX41bP46">
+          <Node Bounds="237,851,80,19" Id="VtwAa4xbsHuOhcjX41bP46">
             <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="FirstOrDefault" />
@@ -99,16 +99,7 @@
             <Pin Id="TPYYc6dEgWKLRegPW4h8Pm" Name="Output" Kind="StateOutputPin" />
             <Pin Id="QurQevFF88ELXQZA3an0vm" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="172,985,76,26" Id="IxOqNaRqRBDMIwMGpXYFJt">
-            <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastSymbolSource="VL.Onnx.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="Inference" />
-            </p:NodeReference>
-            <Pin Id="PGAGRE3Ds3uOwc75FeoeM0" Name="Input" Kind="StateInputPin" />
-            <Pin Id="MbH95jvTNzGMcqu4psixYj" Name="State Output" Kind="StateOutputPin" />
-            <Pin Id="FOGwrwfmcJoPeZLcJHtkLy" Name="Output" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="193,1272,185,19" Id="PelpVP2eT8oPZnyf3fWleB">
+          <Node Bounds="186,1247,185,19" Id="PelpVP2eT8oPZnyf3fWleB">
             <p:NodeReference LastCategoryFullName="Stride.Textures" LastSymbolSource="VL.Stride.Engine.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="TextureWindow" />
@@ -132,7 +123,7 @@
               <Choice Kind="TypeFlag" Name="NormalizeMethod" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="EuURMvzobFWN9rqioJHmk1" Comment="NormalizeMethod" Bounds="326,867,104,15" ShowValueBox="true" isIOBox="true" Value="ZeroTo255">
+          <Pad Id="EuURMvzobFWN9rqioJHmk1" Comment="NormalizeMethod" Bounds="326,875,104,15" ShowValueBox="true" isIOBox="true" Value="ZeroTo255">
             <p:TypeAnnotation LastCategoryFullName="VL.Onnx" LastSymbolSource="VL.Onnx.vl">
               <Choice Kind="TypeFlag" Name="NormalizeMethod" />
             </p:TypeAnnotation>
@@ -481,6 +472,15 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
+          <Node Bounds="172,974,76,26" Id="IxOqNaRqRBDMIwMGpXYFJt">
+            <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastSymbolSource="VL.Onnx.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="Inference" />
+            </p:NodeReference>
+            <Pin Id="PGAGRE3Ds3uOwc75FeoeM0" Name="Input" Kind="StateInputPin" />
+            <Pin Id="MbH95jvTNzGMcqu4psixYj" Name="State Output" Kind="StateOutputPin" />
+            <Pin Id="FOGwrwfmcJoPeZLcJHtkLy" Name="Output" Kind="OutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="SuirDEkSZKIMUflDRaOFwY" Name="Create" />
         <Patch Id="Mx28Cd9KpZxPmRYX1IAYmA" Name="Update" />
@@ -495,17 +495,17 @@
         <Link Id="KfsL0tJD95rNE2XIDoAFfh" Ids="Ege6VmuwiLxOP6tHKQ2vSB,LnJgdpqd3OuOG8qMErAfz5" />
         <Link Id="QIhMi3PbkIVQCLXLkxB1bq" Ids="CnLBQyOgIY3QDrf1gkcXL5,Drf026uVdBXNSQNqmBqRge" />
         <Link Id="CNvH0YFWM9sM8J8YSovoVJ" Ids="DJMbG6RTcS9PbtbUjGIhSh,TtnHAWBTFpRNLqtqQUlVev" />
-        <Link Id="Sq8k7hBKN0ePegIEY5BFd7" Ids="V21OEI2gvVTMJFopz0dnIM,TakXLmHQ1hBOpYsgI4wDCW" />
         <Link Id="R6L3PmvqnXBOGGO5iILY9U" Ids="PU7XtEvzALCMWyaT88AGXh,EpwYkuYFIroLF3UWVdMoox" />
         <Link Id="D9eThzSz6i5QIFhBDWUt57" Ids="QurQevFF88ELXQZA3an0vm,Gm4MPXnxpgULSuL2037K1W" />
-        <Link Id="EdNVEX5YVOlPrQIgOQF8Zk" Ids="NrGXqlI17AcOdJLbMcxGFn,PGAGRE3Ds3uOwc75FeoeM0" />
-        <Link Id="U2A77qDY8QPNIBonszStbp" Ids="FOGwrwfmcJoPeZLcJHtkLy,FHqTSfqLxIxMYsISEMtlQ5" />
         <Link Id="LmjNZvfaiTmNn2L8lawYf3" Ids="GJfQpFh7ZhQMes1RhHCOe1,MG1Vr6cB6bfNpbzEhmth2j" />
         <Link Id="UJCjziHSqoVP7LUUxvXs2C" Ids="EuURMvzobFWN9rqioJHmk1,BSa7gnBKLHLMpCt4lfuprW" />
         <Link Id="Rdf00bMo0BgNef5d7rCEgB" Ids="JEVjrzwoIbEPu8WgkkCWXN,A56EfNUGnOWNcC1qPAGYhu" />
         <Link Id="D8g6uWeB7PfPBn0lLxomxu" Ids="BRX5pdEipN0L9ISJQh0CPR,RPD30iHZO6hO5aJaq7NLTM" />
         <Link Id="VBgFeDXK88NNMbArtHa9Nf" Ids="IYr4WSxdxhaLBKjBrES9Q6,BCtc0QfoYFEMteJG0Lqt59" />
-        <Link Id="FMxk9n1vWXkM5LbJ7gfqKC" Ids="BCtc0QfoYFEMteJG0Lqt59,FhcA4Mw8g2aOcG87uhR7fN" />
+        <Link Id="UpLW29N1f9AMylpvpEAcBn" Ids="NrGXqlI17AcOdJLbMcxGFn,PGAGRE3Ds3uOwc75FeoeM0" />
+        <Link Id="AenlUbDji8HLECOHMh1rDz" Ids="FOGwrwfmcJoPeZLcJHtkLy,FHqTSfqLxIxMYsISEMtlQ5" />
+        <Link Id="De3s4TmibQKOzo4G5hu7Dg" Ids="V21OEI2gvVTMJFopz0dnIM,TakXLmHQ1hBOpYsgI4wDCW" />
+        <Link Id="VGXfGyipoQ2MJRz2FyiOFU" Ids="BCtc0QfoYFEMteJG0Lqt59,FhcA4Mw8g2aOcG87uhR7fN" />
       </Patch>
     </Node>
   </Patch>
