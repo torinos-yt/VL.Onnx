@@ -68,6 +68,7 @@ ipch/
 # unused bynary
 Stride*.dll
 VL.Core*.dll
+*deps.json
 
 # VVVV
 .vl/

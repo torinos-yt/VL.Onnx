@@ -1,3 +1,6 @@
+namespace Onnx
+{
+
 public enum NormalizeMethod
 {
     ZeroToOne = 0,
@@ -9,4 +12,6 @@ public enum Provider
 {
     Cuda = 0,
     TensorRT
+}
+
 }

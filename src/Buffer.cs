@@ -4,6 +4,9 @@ using System.Reflection;
 using SharpDXBuffer = SharpDX.Direct3D11.Buffer;
 using StrideBuffer = Stride.Graphics.Buffer;
 
+namespace Onnx
+{
+
 public static class NativeBufferExtractorExtensions
 {
     public static IntPtr GetGraphicResourcePtr(this StrideBuffer strideBuffer)
@@ -17,4 +20,6 @@ public static class NativeBufferExtractorExtensions
 
         return sharpDxBuffer.NativePointer;
     }
+}
+
 }
