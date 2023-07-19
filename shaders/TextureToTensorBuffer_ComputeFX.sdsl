@@ -8,17 +8,19 @@ shader TextureToTensorBuffer_ComputeFX : ComputeShaderBase
     float2 ImageSize;
 
     int normMethod;
+    int filpVertical = 0;
 
     override void Compute()
     {
         uint2 id = streams.DispatchThreadId.xy;
 
-        // UV (vertically flipped)
-        float2 uv = float2(0.5 + id.x, ImageSize.y - 0.5 - id.y) / ImageSize;
+        float2 uv = float2(0.5 + id.x, 0.5 + id.y) / ImageSize;
+        if(filpVertical) uv = float2(0.5 + id.x, ImageSize.y - 0.5 - id.y) / ImageSize;
 
         // UV gradients
         float2 duv_dx = float2(1.0 / ImageSize.x, 0);
         float2 duv_dy = float2(0, -1.0 / ImageSize.y);
+        if(filpVertical) duv_dy = float2(0, 1.0 / ImageSize.y);
 
         // Texture sample
         // Value range : [0, 1]
