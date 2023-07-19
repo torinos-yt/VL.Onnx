@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="NetcI3kAd3pM1VQCr7LAAe" LanguageVersion="2023.5.2" Version="0.128">
+  <NugetDependency Id="VA088DPbWZnLDvI7JoWF6l" Location="VL.CoreLib" Version="2023.5.2" />
+  <Patch Id="SHdjbJY6DWTQWRCDTLZuRt">
+    <Canvas Id="IQ3HcBD4c58NPLomtNXNMa" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="GUWFsIb8ZrkNkUZxjU9DPw">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="Gpafk9eyUwqPDKz00yc4mL">
+        <Canvas Id="IsspAJ4pzo1PsI6oqEMXDx" CanvasType="Group">
+          <Node Bounds="598,169,80,19" Id="SWCiD5YtKWNPvsOEsoxU7S">
+            <p:NodeReference LastCategoryFullName="VL.Onnx" LastDependency="VL.Onnx.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Onnx" />
+              <Choice Kind="ProcessAppFlag" Name="CreateSession" />
+            </p:NodeReference>
+            <Pin Id="K1Eq4zuqJH7PY7SMvLeMCe" Name="Model Path" Kind="InputPin" />
+            <Pin Id="P7jIyDC7LsIMeUtWhKRByo" Name="Provider" Kind="InputPin" />
+            <Pin Id="QUTAGOnrDq7OeP3nElx7w6" Name="Session" Kind="OutputPin" />
+          </Node>
+          <Pad Id="AabZ51gBJQtP4SdYBEImb5" Comment="Model Path" Bounds="600,111,170,15" ShowValueBox="true" isIOBox="true" Value="..\resources\resnet50.onnx">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="TNjEb80sbwVPs4ZzfmUHUM" Comment="Provider" Bounds="675,141,72,15" ShowValueBox="true" isIOBox="true" Value="Cuda">
+            <p:TypeAnnotation LastCategoryFullName="VL.Onnx" LastDependency="VL.Onnx.vl">
+              <Choice Kind="TypeFlag" Name="Provider" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="822,334,83,26" Id="IyKAv0v4W3sNCxrYLQNDku">
+            <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastDependency="VL.Onnx.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Onnx" />
+              <CategoryReference Kind="ClassType" Name="InferenceSession" />
+              <Choice Kind="OperationCallFlag" Name="InputMetaData" />
+            </p:NodeReference>
+            <Pin Id="I83h4Ly3APiPNBLuZiPNTt" Name="Input" Kind="StateInputPin" />
+            <Pin Id="MNxwRVG6UPsL5JlcMv6v5s" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="H4G8r6aWDgPOS8dwuIS5dS" Name="InputData" Kind="OutputPin" />
+          </Node>
+          <Pad Id="SuxyNE1bcO9LzOZCjmYeDM" Comment="InputData" Bounds="953,383,201,76" ShowValueBox="true" isIOBox="true">
+            <p:Value />
+          </Pad>
+          <Node Bounds="362,340,91,26" Id="FzjWWwr4rVRPdhr0D7Kv4x">
+            <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastDependency="VL.Onnx.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="OutputMetaData" />
+            </p:NodeReference>
+            <Pin Id="CqtpbPwDuiNM32XqhinCLE" Name="Input" Kind="StateInputPin" />
+            <Pin Id="EoQLZynyC9hP0ualVAD6HI" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="KgnqFd3XVGpLY7Wq8anwPv" Name="OutputData" Kind="OutputPin" />
+          </Node>
+          <Pad Id="Bicl6PA5TXTO1d3bqN6CLm" Comment="OutputData" Bounds="474,392,203,79" ShowValueBox="true" isIOBox="true">
+            <p:Value />
+          </Pad>
+          <Node Bounds="820,614,85,26" Id="BVAMhmAzZ51MBqZ4WbzS5p">
+            <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastDependency="VL.Onnx.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="BindInput (Texture)" />
+            </p:NodeReference>
+            <Pin Id="H2pKsDQevkoO3DV2iWXcWU" Name="Input" Kind="StateInputPin" />
+            <Pin Id="DTpgxc40bd8PM7Zt01Aa1s" Name="NodeData" Kind="InputPin" />
+            <Pin Id="QqA948FcfeXLMep5Sw8OaN" Name="Texture" Kind="InputPin" />
+            <Pin Id="QGyiisJfZ7HOn1knoxa5dY" Name="NormalizeMethod" Kind="InputPin" />
+            <Pin Id="ULyEvP2a8UMLrevgVCIw6K" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="Mpc6Nb9JvAdLhlevfUr980" Name="Filp Vertical" Kind="InputPin" />
+          </Node>
+          <Node Bounds="857,393,80,19" Id="G3Xo3NpTGhYQWgJq0FUbgq">
+            <p:NodeReference LastCategoryFullName="Collections.Sequence" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="FirstOrDefault" />
+            </p:NodeReference>
+            <Pin Id="P5ZTgcNDAS3QEwc114uvil" Name="Input" Kind="StateInputPin" />
+            <Pin Id="EbGRBnBYdwCOIgQ8umNT1y" Name="Default Value" Kind="InputPin" />
+            <Pin Id="NGEgDpaaCgJMmtlvYxmVsF" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="B5rBBgLtvCJLJNXSpReml6" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="Gic0sNJcbkNPdWC7vrz9pY" Comment="NormalizeMethod" Bounds="882,530,104,15" ShowValueBox="true" isIOBox="true" Value="ZeroToOne">
+            <p:TypeAnnotation LastCategoryFullName="VL.Onnx" LastDependency="VL.Onnx.vl">
+              <Choice Kind="TypeFlag" Name="NormalizeMethod" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="1429,326,105,19" Id="Ag9KOBHHDCjNL9cG6SBtg3">
+            <p:NodeReference LastCategoryFullName="Stride.Assets" LastDependency="VL.Stride.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="FileTexture" />
+            </p:NodeReference>
+            <Pin Id="Rs9raYWNHd1LwQPa4bQO9q" Name="Path" Kind="InputPin" DefaultValue="..\resources\dog_input.png" />
+            <Pin Id="V3VevIovi9rNauqNKmpxHW" Name="Generate Mipmaps" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="JREuWjbijtSM522R18SWCT" Name="Premultiply Alpha" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="DIaHrTII72gMQN3sRg0wyt" Name="Compress" Kind="InputPin" />
+            <Pin Id="Bb8r2SJMtv8P8Oo3bRRDxX" Name="Alpha Format" Kind="InputPin" />
+            <Pin Id="N02WMs8UCnsPyOn8IiBsCI" Name="Reload" Kind="InputPin" />
+            <Pin Id="SjV11BnLN7TPKZW8ag9Tsh" Name="Texture" Kind="OutputPin" />
+            <Pin Id="PDHW9U4Q9XDLdGcY2ns38i" Name="Is Loading" Kind="OutputPin" />
+            <Pin Id="SD4lFc1Q17cNpGxuQTG7kg" Name="Already Loaded" Kind="OutputPin" />
+          </Node>
+          <Pad Id="L4MYAi2BS1QLOsXMNWr7Qt" Comment="Texture" Bounds="1431,374,189,173" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="362,611,76,26" Id="M2jUDhdB7cvMhUTWtXX4Iz">
+            <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastDependency="VL.Onnx.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="BindOutput (Buffer)" />
+            </p:NodeReference>
+            <Pin Id="KS7GtkMpRPqOisLtDoZ4pl" Name="Input" Kind="StateInputPin" />
+            <Pin Id="IxLIUh3YNe5Nsf4Ct0i3S3" Name="NodeData" Kind="InputPin" />
+            <Pin Id="G2IHugKjlAwQMdHw1w6zRE" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Node Bounds="383,405,80,19" Id="IzXHp1QvpxaQdqiSmmbAPw">
+            <p:NodeReference LastCategoryFullName="Collections.Sequence" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="FirstOrDefault" />
+            </p:NodeReference>
+            <Pin Id="KQ0FO0nhBigLhF1LLmFztU" Name="Input" Kind="StateInputPin" />
+            <Pin Id="L9mOXiZWFkXNRSqFiZNMzD" Name="Default Value" Kind="InputPin" />
+            <Pin Id="TyiWp2G7zvOQSMle3FGcTk" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="V7QAf0Lt7wvO6gTkhHPcPL" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="638,777,76,26" Id="TaVNXvIUw62PtZ3wDiJAZ6">
+            <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastDependency="VL.Onnx.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="Inference" />
+            </p:NodeReference>
+            <Pin Id="Oo3gvemqQtWLHEw1IsndtO" Name="Input" Kind="StateInputPin" />
+            <Pin Id="CzJb2X995aVO0s9oJsP0FE" Name="State Output" Kind="StateOutputPin" />
+            <Pin Id="Tx01g0anju1O8P8P0L6BkY" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="243,1080,63,19" Id="OZhJ7WfHQ01LwaUsEJM2nR">
+            <p:NodeReference LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="FileReader (String)" />
+            </p:NodeReference>
+            <Pin Id="ImrTFPnefSVPHlm08B0kP9" Name="File Path" Kind="InputPin" />
+            <Pin Id="IWEluejquSYMuq9ZxrvEfg" Name="Encoding" Kind="InputPin" DefaultValue="UTF8" />
+            <Pin Id="EicyLvRnnk1MThY7ICPTaS" Name="Read" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="L4fhgdGLNdrNsvs9rYyb5l" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="DyKAfAFZGowPyE5qZXC8cb" Comment="File Path" Bounds="245,1007,140,15" ShowValueBox="true" isIOBox="true" Value="..\resources\imagenet_classes.txt">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="243,1123,71,19" Id="VPzjzljewTVLOObZO44eIb">
+            <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="SplitToLines" />
+            </p:NodeReference>
+            <Pin Id="DrRnvJ0kKgbQBEXmE8976J" Name="Input" Kind="StateInputPin" />
+            <Pin Id="EldzRZRY6rMLzqRT521faT" Name="Remove Empty Lines" Kind="InputPin" />
+            <Pin Id="Kjn9Eb0RlHtMYbccYN9naR" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Pad Id="Tc5RCnZWg0sLfUcso0oK3s" Comment="" Bounds="245,1172,172,108" ShowValueBox="true" isIOBox="true">
+            <p:Value>
+              <Item></Item>
+            </p:Value>
+          </Pad>
+          <Node Bounds="633,1090,81,19" Id="AHYrf6bNbz8LXkFJbNIRFF">
+            <p:NodeReference LastCategoryFullName="Stride.Buffers.ReadBack" LastDependency="VL.Stride.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="ReadBackFloat" />
+            </p:NodeReference>
+            <Pin Id="KNKh5IvvsWQLZkLTHa7vol" Name="Buffer" Kind="InputPin" />
+            <Pin Id="TQoeZFlVClCNZB1Jx4tBtH" Name="Element Count" Kind="InputPin" />
+            <Pin Id="VyJaC16tSoyNFeQaq5N7gH" Name="Elements Per Buffer Structure" Kind="InputPin" />
+            <Pin Id="OI6ivReUOhxPEi2kRN6bnw" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="635,910,80,19" Id="G1ZGcsKyHS9PWfs5444pXh">
+            <p:NodeReference LastCategoryFullName="Collections.Sequence" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="FirstOrDefault" />
+            </p:NodeReference>
+            <Pin Id="B0LdNqeDEgxPFT1khsc9NA" Name="Input" Kind="StateInputPin" />
+            <Pin Id="SMdA7eYIT4oOBrjGQZubai" Name="Default Value" Kind="InputPin" />
+            <Pin Id="N4wGRhIqTPRMdQi8T6CrlJ" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="B0FolvW36mlMtTuQASeWUy" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="Ph7ZDVZtoo0Oq4tLkmLCtr" Comment="" Bounds="635,1169,103,112" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:precision p:Type="Int32">4</p:precision>
+              <p:stepsize p:Type="Single">0.01</p:stepsize>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="633,1003,80,26" Id="FvP9kvcOWIIOh12TQfEZJd">
+            <p:NodeReference LastCategoryFullName="Stride.API.Graphics.Buffer" LastDependency="VL.Stride.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="ElementCount" />
+            </p:NodeReference>
+            <Pin Id="Hlj36T9BKkBPK7cyltxBrx" Name="Input" Kind="StateInputPin" />
+            <Pin Id="EWr2gcnCexSOeNw2je5qIh" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="J5Aei2LqPYWQBm4RfCncw0" Name="Element Count" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="351,1349,235,159" Id="MfL9f7xmAbBPhq4HwjSbii">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+            </p:NodeReference>
+            <Pin Id="DtPGRji0WbDOq576Qy4sLc" Name="Break" Kind="OutputPin" />
+            <Patch Id="DlL8uZEBdyjMa1qkZjndBP" ManuallySortedPins="true">
+              <Patch Id="QhuDuVL9mKYNXjC7jd9lh7" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="CtMHEU5zVtVOoZdag4AoRr" Name="Update" ManuallySortedPins="true">
+                <Pin Id="CtsKrqIe3SCOAoVWBg6QoH" Name="Keep" Kind="OutputPin" />
+              </Patch>
+              <Patch Id="G78A7lxynMlQD4uQBQ8Lpx" Name="Dispose" ManuallySortedPins="true" />
+              <ControlPoint Id="QvPFKg5V4GRP11uYT0JLE1" Bounds="452,1472" />
+              <Pad Id="OhUdZyFROLYMl1k9JPbZpN" Comment="" Bounds="431,1395,35,15" ShowValueBox="true" isIOBox="true" Value="0.01">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Float32" />
+                </p:TypeAnnotation>
+              </Pad>
+              <Node Bounds="450,1426,25,19" Id="CRL6YdKSBP5NhfKcdq8x5u">
+                <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="&lt;" />
+                </p:NodeReference>
+                <Pin Id="TRIFp1iEtKGMzrclPZxSg5" Name="Input" Kind="InputPin" />
+                <Pin Id="HZsR7UgU4BJMZXqYuRPjBj" Name="Input 2" Kind="InputPin" />
+                <Pin Id="FmFq81AZceDOD2vkq6zHFz" Name="Result" Kind="OutputPin" />
+              </Node>
+            </Patch>
+            <ControlPoint Id="PfLj5MEz0S2MJFAPO4THPO" Bounds="569,1355" Alignment="Top" />
+            <ControlPoint Id="VeYCyX4WPnxPa6mGntGMjJ" Bounds="366,1355" Alignment="Top" />
+            <ControlPoint Id="HHyC73HFGADO1gdTUAXkjd" Bounds="568,1502" Alignment="Bottom" />
+            <ControlPoint Id="FlfInPvm90fOoxEl5ndyc5" Bounds="365,1502" Alignment="Bottom" />
+          </Node>
+          <Pad Id="G09PjtyPkOMLdu1H6se9hx" Comment="Label" Bounds="365,1553,123,95" ShowValueBox="true" isIOBox="true">
+            <p:Value>
+              <Item></Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="E3YamqHfpcoQS023OED57v" Comment="Score" Bounds="568,1552,61,95" ShowValueBox="true" isIOBox="true" Value="0">
+            <p:ValueBoxSettings>
+              <p:precision p:Type="Int32">4</p:precision>
+              <p:stepsize p:Type="Single">0.01</p:stepsize>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="301,1048,54,19" Id="FJ9yYJcbO7CN7xephuE9K5">
+            <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="OnOpen" />
+            </p:NodeReference>
+            <Pin Id="Dj99UlDsUqfQaqEitREs26" Name="Simulate" Kind="InputPin" />
+            <Pin Id="LDr9rGk47JpPEe1Z11jNne" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="LmZli7V8OQaN30CY69Sdau" Comment="Filp Vertical" Bounds="924,559,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="LObUZLh8CNKPoazRVFvDbN" Comment="input image" Bounds="696,1549,190,132" ShowValueBox="true" isIOBox="true" />
+          <ControlPoint Id="M5DYANrQC8mP0jwJU715Kj" Bounds="1436,1184" />
+          <Overlay Id="O14r4avl6BVL1n5ZzICLZv" Name="Run Inference" Bounds="581,724,196,121">
+            <p:ColorIndex p:Type="Int32">7</p:ColorIndex>
+          </Overlay>
+          <Overlay Id="JD6ecVh1wTsMKe3AMd0vnk" Name="Load ONNX Model" Bounds="548,43,330,180" />
+          <Overlay Id="K5avBFKISjNLlp57Edj7mE" Name="Bind in/out Resources and Preprocess" Bounds="258,291,963,383">
+            <p:ColorIndex p:Type="Int32">8</p:ColorIndex>
+          </Overlay>
+          <Overlay Id="NDG9oGFg2eUM4ikotcJrwX" Name="Postprocess" Bounds="198,892,773,835">
+            <p:ColorIndex p:Type="Int32">3</p:ColorIndex>
+          </Overlay>
+          <Pad Id="SVqHzmvm5RLOh8C2hQ93za" Bounds="450,3,528,30" ShowValueBox="true" isIOBox="true" Value="https://github.com/onnx/models/blob/main/vision/classification/resnet/README.md">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="RYkES9ZvQEbMXkNSrqBIPe" Bounds="452,-29,658,31" ShowValueBox="true" isIOBox="true" Value="more information about resnet50 image classification is here:">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">15</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="QnvtJD9dGUNLowSxkTt1od" Bounds="222,50,272,29" ShowValueBox="true" isIOBox="true" Value="1. Load Model">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="IPMGQ2pFIfCPj6kIi22ohE" Bounds="224,86,304,63" ShowValueBox="true" isIOBox="true" Value="Load .onnx format pre-trained model.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="CyuihZzC7pzLP9CS8fy7rQ" Bounds="223,151,283,66" ShowValueBox="true" isIOBox="true" Value="For more information on the onnx format, see here">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="B0KrBcT0Eq2MCXFaOOEEWq" Bounds="223,212,284,25" ShowValueBox="true" isIOBox="true" Value="https://learn.microsoft.com/en-us/windows/ai/windows-ml/get-onnx-model">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">12</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="I3Ail9D4k4SNkMB5lZZQ1a" Bounds="902,48,272,29" ShowValueBox="true" isIOBox="true" Value="2. Execution Provider">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="IzI9nZFArp2PKnx7cmxrk7" Bounds="902,88,383,60" ShowValueBox="true" isIOBox="true" Value="The Execution Provider specifies the backend that executes the onnx model.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="BVPfRiOCejCPA8XHu1FPFy" Bounds="902,153,396,60" ShowValueBox="true" isIOBox="true" Value="VL.Onnx basically supports only Cuda EP and TensorRT EP.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="SNTYXuRfk8XN8STpPwMU9k" Bounds="903,213,375,23" ShowValueBox="true" isIOBox="true" Value="https://onnxruntime.ai/docs/execution-providers/">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">11</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="HWdOxn701tbNlAabRSUYIW" Bounds="-39,306,285,29" ShowValueBox="true" isIOBox="true" Value="3. Bind Resources">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="AaZTp8mWgHgPzxzizQbjup" Bounds="-40,341,284,98" ShowValueBox="true" isIOBox="true" Value="After loading the model, check the input/output format">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="VSLMkKyCepWLHnqN7u3zPN" Bounds="-40,439,298,121" ShowValueBox="true" isIOBox="true" Value="Each in/out shape represents what form of tensor (like a multidimensional array) is required.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="RXl5SZ8oiBlPcNAxeJsJIF" Bounds="-41,565,292,99" ShowValueBox="true" isIOBox="true" Value="So bind Stride Buffer or Texture to the tensor in the requested format.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="L88ETzZJ0TwNqysiDXcg5A" Bounds="1091,484,308,109" ShowValueBox="true" isIOBox="true" Value="BindInput (Texture) node resizes the input texture to fit the input tensor format and binds it.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="N1zBskyP9LAPGlZeN2rbtC" Bounds="1091,704,316,123" ShowValueBox="true" isIOBox="true" Value="Use BindInput (Buffer) nodes and Buffer that contain your own data if your model requires input other than textures.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="HLXjAY1WiK7MetuOVH07sz" Bounds="1092,607,311,91" ShowValueBox="true" isIOBox="true" Value="This node performs operations assuming that the model definitely requires texture input.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="ApBlJWrlE0TLslY3iIRcJk" Bounds="460,486,314,175" ShowValueBox="true" isIOBox="true" Value="The BindOutput (Buffer) node creates and binds a Buffer with the same number of elements as the output tensor. The bound Buffer is kept inside the session and output after inference.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="D2neXITL1LvOalxFtOKnXU" Bounds="-41,663,294,181" ShowValueBox="true" isIOBox="true" Value="If the first element of shape is -1, it indicates that the shape is dynamic and requires user specification to bind. VL.Onnx sets all dynamic elements of shape as 1.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="ETp6YpNHn6jOHLvJyskbUa" Bounds="941,349,235,19" ShowValueBox="true" isIOBox="true" Value="shape : nums, channels, height, width">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="MwUnpSS9IB3PtAYfdczbfB" Bounds="501,355,153,19" ShowValueBox="true" isIOBox="true" Value="shape : nums, element">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="HzVsNNv6DSjLkVHuBURs0E" Bounds="-104,901,218,29" ShowValueBox="true" isIOBox="true" Value="4. Postprocess">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="KRjyXZBgk1uNuRebUr07gQ" Bounds="-103,937,285,156" ShowValueBox="true" isIOBox="true" Value="The inference results of the model are output in Buffer or Texture for the number of Outputs of the model.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:maxvisiblechars p:Type="Int32">44444</p:maxvisiblechars>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="650,945,45,19" Id="IuCbvg00VhTL6Kco9pkOPs">
+            <p:NodeReference LastCategoryFullName="Primitive.Tuple (3 Items)" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="ClassType" Name="Tuple (3 Items)" />
+              <Choice Kind="OperationCallFlag" Name="Tuple (Split)" />
+            </p:NodeReference>
+            <Pin Id="PBlfQ97yrXKPbCAydiZhHC" Name="Input" Kind="StateInputPin" />
+            <Pin Id="Lua5uC9Ww4fMw4egrIvBoW" Name="Item 1" Kind="OutputPin" />
+            <Pin Id="SJoJ4eBu5c5Mfo2iyEhZWj" Name="Item 2" Kind="OutputPin" />
+            <Pin Id="NX0WVNT66ijM33sSvuA9BW" Name="Item 3" Kind="OutputPin" />
+          </Node>
+          <Pad Id="F7w3r0OWHmDNJwK4X6YIzM" Comment="Item 1" Bounds="555,981,45,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="CPbZ3NxDGXLLrgR2d4nDzB" Bounds="751,1167,359,93" ShowValueBox="true" isIOBox="true" Value="The resnet50 image classification model outputs image scores for each of the 1000 classes of ImageNet.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="G0vaVdmoW2dNUZX7FipNxy" Bounds="751,1257,340,23" ShowValueBox="true" isIOBox="true" Value="https://github.com/onnx/models/blob/main/vision/classification/synset.txt">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">11</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="GYdd7goFf6kPaTS3s8Erj2" Bounds="324,1103,173,29" ShowValueBox="true" isIOBox="true" Value="read label datas">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="270,611,76,26" Id="TvqYaVJIZoHPaTstJHw8R8">
+            <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastDependency="VL.Onnx.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="BindOutput (Texture)" />
+            </p:NodeReference>
+            <Pin Id="HnlwcHcv213PFOFmY1IdG2" Name="Input" Kind="StateInputPin" />
+            <Pin Id="MlNQ660L4qaO9wQN07WGxF" Name="NodeData" Kind="InputPin" />
+            <Pin Id="SjLVduGDX0FLgU0Bxd3qjd" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Node Bounds="922,614,76,26" Id="K4vk01QBFQDNPt7Jwl9m7s">
+            <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastDependency="VL.Onnx.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="BindInput (Buffer)" />
+            </p:NodeReference>
+            <Pin Id="Ssm6zXvwTftO09pUKj4JQM" Name="Input" Kind="StateInputPin" />
+            <Pin Id="JS72kjHbBpgPPhsUstVmkZ" Name="NodeData" Kind="InputPin" />
+            <Pin Id="VoJDwPkUVDAMCZQr41PZVv" Name="Buffer" Kind="InputPin" />
+            <Pin Id="NRpcdtUMsVHLwLtSrSUNwZ" Name="Output" Kind="StateOutputPin" />
+          </Node>
+        </Canvas>
+        <Patch Id="QlqnjstZg9yNk2sY5w7GCG" Name="Create" />
+        <Patch Id="DVkMvFyvAB8POqDOlDFNcI" Name="Update" />
+        <ProcessDefinition Id="ML3hbiBGnHSNVBXHXOvn2b">
+          <Fragment Id="BOkxO7WbOYRMRWaidPF92i" Patch="QlqnjstZg9yNk2sY5w7GCG" Enabled="true" />
+          <Fragment Id="BHgzekTTl0IN9HmZPpAZHT" Patch="DVkMvFyvAB8POqDOlDFNcI" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="QvwsuMECn3xLaOubHHz07L" Ids="AabZ51gBJQtP4SdYBEImb5,K1Eq4zuqJH7PY7SMvLeMCe" />
+        <Link Id="E4hblxh36FqMPUtpXlYJFV" Ids="TNjEb80sbwVPs4ZzfmUHUM,P7jIyDC7LsIMeUtWhKRByo" />
+        <Link Id="Dx43nOVDoxYPNDynAWTD81" Ids="QUTAGOnrDq7OeP3nElx7w6,I83h4Ly3APiPNBLuZiPNTt" />
+        <Link Id="IZjmfmQOmptMOTh7fXxdXQ" Ids="H4G8r6aWDgPOS8dwuIS5dS,SuxyNE1bcO9LzOZCjmYeDM" />
+        <Link Id="MpmSVeC52jeMeV7En3DqFt" Ids="KgnqFd3XVGpLY7Wq8anwPv,Bicl6PA5TXTO1d3bqN6CLm" />
+        <Link Id="H764zT3b73OPJ0XDjIpyJ5" Ids="H4G8r6aWDgPOS8dwuIS5dS,P5ZTgcNDAS3QEwc114uvil" />
+        <Link Id="OYChMyL5dPRNQ28fgAZhF8" Ids="B5rBBgLtvCJLJNXSpReml6,DTpgxc40bd8PM7Zt01Aa1s" />
+        <Link Id="EHfG8zBf44gLzZFAztC4Xe" Ids="Gic0sNJcbkNPdWC7vrz9pY,QGyiisJfZ7HOn1knoxa5dY" />
+        <Link Id="RGw6Urbz6r8OhKVUgfYU1a" Ids="SjV11BnLN7TPKZW8ag9Tsh,L4MYAi2BS1QLOsXMNWr7Qt" />
+        <Link Id="RmRL0vCbF2zNd9RgbOBd70" Ids="L4MYAi2BS1QLOsXMNWr7Qt,QqA948FcfeXLMep5Sw8OaN" />
+        <Link Id="I8CD4AGnEW2MQJWNq55gej" Ids="KgnqFd3XVGpLY7Wq8anwPv,KQ0FO0nhBigLhF1LLmFztU" />
+        <Link Id="VgyEZIQ4MTEQBWhfYgsynz" Ids="V7QAf0Lt7wvO6gTkhHPcPL,IxLIUh3YNe5Nsf4Ct0i3S3" />
+        <Link Id="DuKhiHP7wV3PTmhcIsK3hw" Ids="DyKAfAFZGowPyE5qZXC8cb,ImrTFPnefSVPHlm08B0kP9" />
+        <Link Id="TcyhqygRZCsPM7c4cjmjAv" Ids="L4fhgdGLNdrNsvs9rYyb5l,DrRnvJ0kKgbQBEXmE8976J" />
+        <Link Id="J6NdplJU6eHLNSEy8DeYSV" Ids="Kjn9Eb0RlHtMYbccYN9naR,Tc5RCnZWg0sLfUcso0oK3s" />
+        <Link Id="LD4e0QYRE6wOoZ5l5dcNkF" Ids="OI6ivReUOhxPEi2kRN6bnw,Ph7ZDVZtoo0Oq4tLkmLCtr" />
+        <Link Id="LRh5ybhPuuyMCSUbKJkxwt" Ids="J5Aei2LqPYWQBm4RfCncw0,TQoeZFlVClCNZB1Jx4tBtH" />
+        <Link Id="TMHBgpcfa8rNbA6AO3B0A3" Ids="EWr2gcnCexSOeNw2je5qIh,KNKh5IvvsWQLZkLTHa7vol" />
+        <Link Id="Q1se8Vv3TFzMrrEu4PSLOb" Ids="Ph7ZDVZtoo0Oq4tLkmLCtr,PfLj5MEz0S2MJFAPO4THPO" />
+        <Link Id="Bxd2QolGaPXQaMNaq8S2MC" Ids="QvPFKg5V4GRP11uYT0JLE1,CtsKrqIe3SCOAoVWBg6QoH" IsHidden="true" />
+        <Link Id="N9W9AK5KaJzOXsuSIB5bQh" Ids="Tc5RCnZWg0sLfUcso0oK3s,VeYCyX4WPnxPa6mGntGMjJ" />
+        <Link Id="PWcB0ztlTA0PBgvrp7sUAF" Ids="VeYCyX4WPnxPa6mGntGMjJ,FlfInPvm90fOoxEl5ndyc5" />
+        <Link Id="L7rzZSE48R1QYWAE9jv8kI" Ids="FlfInPvm90fOoxEl5ndyc5,G09PjtyPkOMLdu1H6se9hx" />
+        <Link Id="BLMIu19JczYNVKl4fbruck" Ids="PfLj5MEz0S2MJFAPO4THPO,HHyC73HFGADO1gdTUAXkjd" />
+        <Link Id="GwdA7VAUBDRLQny6zSy1SY" Ids="HHyC73HFGADO1gdTUAXkjd,E3YamqHfpcoQS023OED57v" />
+        <Link Id="TZbbkpRSbctNwCdrhvcc3V" Ids="LDr9rGk47JpPEe1Z11jNne,EicyLvRnnk1MThY7ICPTaS" />
+        <Link Id="Q7HsuTyUKWlNVV08dHovRe" Ids="OhUdZyFROLYMl1k9JPbZpN,TRIFp1iEtKGMzrclPZxSg5" />
+        <Link Id="TIMj18MAZkwNzVhUA80lOb" Ids="PfLj5MEz0S2MJFAPO4THPO,HZsR7UgU4BJMZXqYuRPjBj" />
+        <Link Id="JZONcE16eBOLvSjaQsHpBd" Ids="FmFq81AZceDOD2vkq6zHFz,QvPFKg5V4GRP11uYT0JLE1" />
+        <Link Id="GQZ3Bowx46pOlIGJjIO7oc" Ids="LmZli7V8OQaN30CY69Sdau,Mpc6Nb9JvAdLhlevfUr980" />
+        <Link Id="UdZ1QkgJcyEQRrCvWhW2Bu" Ids="QUTAGOnrDq7OeP3nElx7w6,CqtpbPwDuiNM32XqhinCLE" />
+        <Link Id="HFarCPPG8i0PIZ2NyibtDO" Ids="EoQLZynyC9hP0ualVAD6HI,KS7GtkMpRPqOisLtDoZ4pl" />
+        <Link Id="NtODkWmeh4JLSSWFoTMU5p" Ids="MNxwRVG6UPsL5JlcMv6v5s,H2pKsDQevkoO3DV2iWXcWU" />
+        <Link Id="MOYV8zpx1V4OspWp11HM4S" Ids="G2IHugKjlAwQMdHw1w6zRE,Oo3gvemqQtWLHEw1IsndtO" />
+        <Link Id="PFXdeIxJZdQQHUPU9xoB4o" Ids="L4MYAi2BS1QLOsXMNWr7Qt,M5DYANrQC8mP0jwJU715Kj,LObUZLh8CNKPoazRVFvDbN" />
+        <Link Id="UZgu57WxQmVLvcE5KKs3u4" Ids="Tx01g0anju1O8P8P0L6BkY,B0LdNqeDEgxPFT1khsc9NA" />
+        <Link Id="KB8KNTYy93sP5cR8vLi9ad" Ids="B0FolvW36mlMtTuQASeWUy,PBlfQ97yrXKPbCAydiZhHC" />
+        <Link Id="UtGv0h38l0xQLBhQcSXTtZ" Ids="SJoJ4eBu5c5Mfo2iyEhZWj,Hlj36T9BKkBPK7cyltxBrx" />
+        <Link Id="LiGPietMsDnMFf6KfkKO59" Ids="Lua5uC9Ww4fMw4egrIvBoW,F7w3r0OWHmDNJwK4X6YIzM" />
+      </Patch>
+    </Node>
+  </Patch>
+  <DocumentDependency Id="QndovkyggSNPGkAoQY8I4d" Location="../VL.Onnx.vl" />
+  <NugetDependency Id="IePvlFlyfUMLx3UrQM1vrb" Location="VL.Stride" Version="2023.5.2" />
+</Document>

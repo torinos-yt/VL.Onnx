@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Pack>
+    <VLDocument link="HowTo Inference using ONNX Pretrained Model.vl"/>
+    <VLDocument link="Example Style Transfer with Stride.vl"/>
+    <VLDocument link="Example Human Segmentation.vl"/>
+</Pack>
