@@ -1799,7 +1799,7 @@
                 </Node>
               </Patch>
             </Node>
-            <Node Bounds="1467,-18,108,19" Id="Lsszq7biYO9OeSzqqbdFZv">
+            <Node Bounds="1477,-83,108,19" Id="Lsszq7biYO9OeSzqqbdFZv">
               <p:NodeReference LastCategoryFullName="Microsoft.ML.OnnxRuntime.Tensors.TensorBase" LastDependency="Microsoft.ML.OnnxRuntime.dll">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="GetElementTypeInfo" />
@@ -1807,7 +1807,7 @@
               <Pin Id="CRZ3GO5XUUPO1C2dYLGoYd" Name="Element Type" Kind="InputPin" />
               <Pin Id="H36JdupEPCnLfhLUOZYqFF" Name="Result" Kind="OutputPin" />
             </Node>
-            <Node Bounds="1467,40,100,26" Id="UzDhpiBjdqrPF01Ay86rRY">
+            <Node Bounds="1477,45,100,26" Id="UzDhpiBjdqrPF01Ay86rRY">
               <p:NodeReference LastCategoryFullName="Microsoft.ML.OnnxRuntime.Tensors.TensorElementTypeInfo" LastDependency="Microsoft.ML.OnnxRuntime.dll">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="AssemblyCategory" Name="TensorElementTypeInfo" />
@@ -2478,7 +2478,7 @@
               <Pin Id="IV5LqrLepunPjuuEnJsbrC" Name="Input 2" Kind="InputPin" />
               <Pin Id="F1I1NMpfQ2ZLf4ZeH8TT6X" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <Node Bounds="4220,-8,108,19" Id="DmpDf1oloPQNXi3iTJHrsj">
+            <Node Bounds="4226,-77,108,19" Id="DmpDf1oloPQNXi3iTJHrsj">
               <p:NodeReference LastCategoryFullName="Microsoft.ML.OnnxRuntime.Tensors.TensorBase" LastDependency="Microsoft.ML.OnnxRuntime.dll">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="GetElementTypeInfo" />
@@ -2486,7 +2486,7 @@
               <Pin Id="KVkh88Enjj6LAMOyIAoRx5" Name="Element Type" Kind="InputPin" />
               <Pin Id="UQ2BSk2V0FLLAU4LHHtUiB" Name="Result" Kind="OutputPin" />
             </Node>
-            <Node Bounds="4220,29,100,26" Id="A2bSyRCTGiKPuK5vw73bj1">
+            <Node Bounds="4225,51,100,26" Id="A2bSyRCTGiKPuK5vw73bj1">
               <p:NodeReference LastCategoryFullName="Microsoft.ML.OnnxRuntime.Tensors.TensorElementTypeInfo" LastDependency="Microsoft.ML.OnnxRuntime.dll">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="AssemblyCategory" Name="TensorElementTypeInfo" />
@@ -2582,6 +2582,50 @@
               <Pin Id="AmQlxhwb8OwLWeaqVpGOpr" Name="Type" Kind="InputPin" />
               <Pin Id="MTZPXbrfQaoMOO3fc7n9d4" Name="Type Size" Kind="InputPin" />
               <Pin Id="I01YJrCilPcP3fPVoD6xIL" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="4226,-42,80,80" Id="KRqDSC9xmG5ND9fUqLaFtS">
+              <p:NodeReference LastCategoryFullName="Stride.API.Core.Utils" LastDependency="VL.Stride.vl">
+                <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="AvoidNull" />
+              </p:NodeReference>
+              <Pin Id="LuKaemn5aexPfUVnys3ges" Name="Input" Kind="InputPin" />
+              <Pin Id="QiNJUTGZwHXOkNlzOPp0pL" Name="Output" Kind="OutputPin" />
+              <Patch Id="QuMrhLhyArBL1wONqCzN5d" Name="Create Default Value" ManuallySortedPins="true">
+                <Pin Id="CLLe6JddzybMWlnngj8pnc" Name="Result" Kind="OutputPin" />
+                <ControlPoint Id="Nzcz78Jb1D8OJwEKlL82uU" Bounds="4242,8" />
+              </Patch>
+            </Node>
+            <Node Bounds="4240,-34,100,26" Id="PqSV5jEfo1sNy1FGyCQToM">
+              <p:NodeReference LastCategoryFullName="Microsoft.ML.OnnxRuntime.Tensors.TensorElementTypeInfo" LastDependency="Microsoft.ML.OnnxRuntime.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="TensorElementTypeInfo" />
+                <Choice Kind="OperationCallFlag" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="OC5tHbDWtAxPRJMN5JVzCf" Name="Type" Kind="InputPin" />
+              <Pin Id="U0e8O0pgot3MH4pN9oov19" Name="Type Size" Kind="InputPin" />
+              <Pin Id="SIJg6XDF9PQNIlwXIDdWtk" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="1476,-50,80,80" Id="HH3MtjiHDOTNSSFDlwnICE">
+              <p:NodeReference LastCategoryFullName="Stride.API.Core.Utils" LastDependency="VL.Stride.vl">
+                <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="AvoidNull" />
+              </p:NodeReference>
+              <Pin Id="E3JjtivkqRzN7ivXneInJa" Name="Input" Kind="InputPin" />
+              <Pin Id="P4vXPRMTv2zNzuNYoOLJjh" Name="Output" Kind="OutputPin" />
+              <Patch Id="KXos4r7Wk6FLj855jpgJu5" Name="Create Default Value" ManuallySortedPins="true">
+                <Pin Id="L7XtEMhNrlBOj5NdX6pgbU" Name="Result" Kind="OutputPin" />
+                <ControlPoint Id="PGkJsU1kMkpOsaOJlDEklv" Bounds="1493,0" />
+              </Patch>
+            </Node>
+            <Node Bounds="1491,-42,100,26" Id="VVek1G0FLfJQNJOVg0em2l">
+              <p:NodeReference LastCategoryFullName="Microsoft.ML.OnnxRuntime.Tensors.TensorElementTypeInfo" LastDependency="Microsoft.ML.OnnxRuntime.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="TensorElementTypeInfo" />
+                <Choice Kind="OperationCallFlag" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="F6voT8q2sBvNEX9ozoAtyS" Name="Type" Kind="InputPin" />
+              <Pin Id="Py4WdojWhUyP7zpYKOLSoF" Name="Type Size" Kind="InputPin" />
+              <Pin Id="US9MuK7QtEpQDQ6wJZjDUh" Name="Output" Kind="StateOutputPin" />
             </Node>
           </Canvas>
           <ProcessDefinition Id="CtGWcZUVWGEOJutYYKDr6m" IsHidden="true">
@@ -2820,7 +2864,6 @@
           <Link Id="P9QSUqm9l7sOXdnWUrstvN" Ids="IVPocfIVAV0O3JleHRfwgO,QV2xGSUuRvZOkQpxQFjckt" />
           <Link Id="GQQqrnwkFrNPBkdFpaf2Cf" Ids="QV2xGSUuRvZOkQpxQFjckt,MLTQ1msgbrwON4o0AJzRvo" />
           <Link Id="UUMFQRwD8ZFMwNUHSCa09o" Ids="EC15F2150gzM3KlpopLEPT,CRZ3GO5XUUPO1C2dYLGoYd" />
-          <Link Id="RfA1dihsvNwMP2Wqal4are" Ids="H36JdupEPCnLfhLUOZYqFF,Ut9cbH1BIpWLlETOiOpKzg" />
           <Link Id="NQE9H5kgd3bNdtbwheBtB2" Ids="OZkN3J036bpMIt6NCuQhPS,QbIxpMYkjM7QSs6T2uQAxb" />
           <Link Id="PjKV9tW2wLLNwjpuRyFKzE" Ids="Oajf7u6km0YPl2YWI5PLfN,CFvOIevhabrOdawN2DJkAu" />
           <Link Id="NBM53IgByZ5Mf06viEXhlJ" Ids="FBDNJ621AhOQaVNEpqKfM1,M9GzMx40e4BLchIVgDP2w5" />
@@ -2961,7 +3004,6 @@
           <Link Id="AzbsfuvxFLpN6mjrPF2Op0" Ids="LP1hlaUTEU2Om2BNoAq4Xx,IV5LqrLepunPjuuEnJsbrC" />
           <Link Id="MoTC2BMg7A4ODblutbBnn0" Ids="F1I1NMpfQ2ZLf4ZeH8TT6X,F2G9UOLjlFjMvqFPmJ7Y4C" />
           <Link Id="TDJfyyEcA6fQVEmCu5Z4bp" Ids="Srv9Ub38sxEQGRheBIsRIE,ICUXw9JUtkKLLiPotcTrwZ" />
-          <Link Id="GMnYI2DDHDTLHS8FEBrt6t" Ids="UQ2BSk2V0FLLAU4LHHtUiB,FZf9eeMAY5dO6zWW2IfEst" />
           <Link Id="S7rirwnztYlMmpTomtweWM" Ids="VtgYvCUg08wOGvw8dqWRfl,KVkh88Enjj6LAMOyIAoRx5" />
           <Link Id="KpKpd7X1E6HP0mNvfJh4uF" Ids="NpzSUwcudOfNZVq9BC4baB,GNRYVw8D3zrP8ibQAgFbCo" />
           <Link Id="CdjsTuIfz9tPVwwIOA02RV" Ids="KMo1orbgH3PM62Aqxc1KR2,UQTnj6lKP59MWmw1JTNDif" />
@@ -3112,6 +3154,14 @@
           <Link Id="Pmu7sRRGCEGOpaMyT25Jgs" Ids="P1seVTSyTrfPKeiA6pAgOy,Rglctl5Cw7XN2OkL0ZHUJ4" />
           <Link Id="B4361XEtElRMpJy0FvP5az" Ids="I01YJrCilPcP3fPVoD6xIL,V3qoU75Us6DQb3X7kXNGBf" />
           <Link Id="HTTpDDYkhfIOMzy5kAOW3l" Ids="K25hAEkNLiDOHdyVw5FgsL,DfT3lkgzBfSQJImynJbcZp" />
+          <Link Id="Qi8xBqVpOnTOMtpG4kxoer" Ids="Nzcz78Jb1D8OJwEKlL82uU,CLLe6JddzybMWlnngj8pnc" IsHidden="true" />
+          <Link Id="PyskKe3dOkILKlra70WDYe" Ids="UQ2BSk2V0FLLAU4LHHtUiB,LuKaemn5aexPfUVnys3ges" />
+          <Link Id="Ez5sycgkNNOMrCLg88ym8o" Ids="SIJg6XDF9PQNIlwXIDdWtk,Nzcz78Jb1D8OJwEKlL82uU" />
+          <Link Id="MpG7Fz0HXjJOqwsFEIwrse" Ids="QiNJUTGZwHXOkNlzOPp0pL,FZf9eeMAY5dO6zWW2IfEst" />
+          <Link Id="NIteLQRU9ddOWTVXejkoWL" Ids="PGkJsU1kMkpOsaOJlDEklv,L7XtEMhNrlBOj5NdX6pgbU" IsHidden="true" />
+          <Link Id="MBCLKkzj4DSNIKCaop6MDA" Ids="H36JdupEPCnLfhLUOZYqFF,E3JjtivkqRzN7ivXneInJa" />
+          <Link Id="MeHxd4Y7nJXPtFjfaZ7fX6" Ids="US9MuK7QtEpQDQ6wJZjDUh,PGkJsU1kMkpOsaOJlDEklv" />
+          <Link Id="BMqxnBmqBEZNGjFQ8sg1Lx" Ids="P4vXPRMTv2zNzuNYoOLJjh,Ut9cbH1BIpWLlETOiOpKzg" />
         </Patch>
       </Node>
       <!--
