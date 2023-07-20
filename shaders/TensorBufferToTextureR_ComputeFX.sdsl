@@ -12,7 +12,8 @@ shader TensorBufferToTextureR_ComputeFX : ComputeShaderBase
         uint2 id = streams.DispatchThreadId.xy;
 
         // Texture element output
-        uint off = ((ImageSize.y - id.y - 1) * ImageSize.x + id.x);
+        // uint off = ((ImageSize.y - id.y - 1) * ImageSize.x + id.x);
+        uint off = (id.y * ImageSize.x + id.x);
 
         float c = TensorBuffer[off];
 

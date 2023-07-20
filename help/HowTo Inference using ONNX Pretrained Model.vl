@@ -61,7 +61,7 @@
           <Pad Id="Bicl6PA5TXTO1d3bqN6CLm" Comment="OutputData" Bounds="474,392,203,79" ShowValueBox="true" isIOBox="true">
             <p:Value />
           </Pad>
-          <Node Bounds="820,614,85,26" Id="BVAMhmAzZ51MBqZ4WbzS5p">
+          <Node Bounds="820,614,76,26" Id="BVAMhmAzZ51MBqZ4WbzS5p">
             <p:NodeReference LastCategoryFullName="VL.Onnx.InferenceSession" LastDependency="VL.Onnx.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="BindInput (Texture)" />
@@ -71,7 +71,6 @@
             <Pin Id="QqA948FcfeXLMep5Sw8OaN" Name="Texture" Kind="InputPin" />
             <Pin Id="QGyiisJfZ7HOn1knoxa5dY" Name="NormalizeMethod" Kind="InputPin" />
             <Pin Id="ULyEvP2a8UMLrevgVCIw6K" Name="Output" Kind="StateOutputPin" />
-            <Pin Id="Mpc6Nb9JvAdLhlevfUr980" Name="Filp Vertical" Kind="InputPin" />
           </Node>
           <Node Bounds="857,393,80,19" Id="G3Xo3NpTGhYQWgJq0FUbgq">
             <p:NodeReference LastCategoryFullName="Collections.Sequence" LastDependency="VL.CoreLib.vl">
@@ -83,7 +82,7 @@
             <Pin Id="NGEgDpaaCgJMmtlvYxmVsF" Name="Output" Kind="StateOutputPin" />
             <Pin Id="B5rBBgLtvCJLJNXSpReml6" Name="Result" Kind="OutputPin" />
           </Node>
-          <Pad Id="Gic0sNJcbkNPdWC7vrz9pY" Comment="NormalizeMethod" Bounds="882,530,104,15" ShowValueBox="true" isIOBox="true" Value="ZeroToOne">
+          <Pad Id="Gic0sNJcbkNPdWC7vrz9pY" Comment="NormalizeMethod" Bounds="889,550,104,15" ShowValueBox="true" isIOBox="true" Value="ZeroToOne">
             <p:TypeAnnotation LastCategoryFullName="VL.Onnx" LastDependency="VL.Onnx.vl">
               <Choice Kind="TypeFlag" Name="NormalizeMethod" />
             </p:TypeAnnotation>
@@ -249,15 +248,6 @@
             <Pin Id="Dj99UlDsUqfQaqEitREs26" Name="Simulate" Kind="InputPin" />
             <Pin Id="LDr9rGk47JpPEe1Z11jNne" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="LmZli7V8OQaN30CY69Sdau" Comment="Filp Vertical" Bounds="924,559,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
-              <CategoryReference Kind="Category" Name="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
           <Pad Id="LObUZLh8CNKPoazRVFvDbN" Comment="input image" Bounds="696,1549,190,132" ShowValueBox="true" isIOBox="true" />
           <ControlPoint Id="M5DYANrQC8mP0jwJU715Kj" Bounds="1436,1184" />
           <Overlay Id="O14r4avl6BVL1n5ZzICLZv" Name="Run Inference" Bounds="581,724,196,121">
@@ -588,7 +578,6 @@
         <Link Id="Q7HsuTyUKWlNVV08dHovRe" Ids="OhUdZyFROLYMl1k9JPbZpN,TRIFp1iEtKGMzrclPZxSg5" />
         <Link Id="TIMj18MAZkwNzVhUA80lOb" Ids="PfLj5MEz0S2MJFAPO4THPO,HZsR7UgU4BJMZXqYuRPjBj" />
         <Link Id="JZONcE16eBOLvSjaQsHpBd" Ids="FmFq81AZceDOD2vkq6zHFz,QvPFKg5V4GRP11uYT0JLE1" />
-        <Link Id="GQZ3Bowx46pOlIGJjIO7oc" Ids="LmZli7V8OQaN30CY69Sdau,Mpc6Nb9JvAdLhlevfUr980" />
         <Link Id="UdZ1QkgJcyEQRrCvWhW2Bu" Ids="QUTAGOnrDq7OeP3nElx7w6,CqtpbPwDuiNM32XqhinCLE" />
         <Link Id="HFarCPPG8i0PIZ2NyibtDO" Ids="EoQLZynyC9hP0ualVAD6HI,KS7GtkMpRPqOisLtDoZ4pl" />
         <Link Id="NtODkWmeh4JLSSWFoTMU5p" Ids="MNxwRVG6UPsL5JlcMv6v5s,H2pKsDQevkoO3DV2iWXcWU" />

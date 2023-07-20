@@ -12,7 +12,8 @@ shader TensorBufferToTextureRGB_ComputeFX : ComputeShaderBase
         uint2 id = streams.DispatchThreadId.xy;
 
         uint plane = ImageSize.x * ImageSize.y;
-        uint off = ((ImageSize.y - id.y - 1) * ImageSize.x + id.x);
+        // uint off = ((ImageSize.y - id.y - 1) * ImageSize.x + id.x);
+        uint off = (id.y * ImageSize.x + id.x);
         float4 c;
         c.r = TensorBuffer[plane * 0 + off];
         c.g = TensorBuffer[plane * 1 + off];
