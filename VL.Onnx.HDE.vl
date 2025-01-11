@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="PCWklp9Yo7uMxEjo97Cwpd" LanguageVersion="2023.5.2" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="KX2AZshAAGEOeHHoDl9yVr" LanguageVersion="2024.6.6" Version="0.128">
   <Patch Id="KMZOPeH7KjONZlPXhWSbcY">
     <Canvas Id="SQgeVQaBm08OqV8VOcjZlv" DefaultCategory="Main" CanvasType="FullCategory">
       <!--
@@ -25,6 +25,7 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="PanelWidget" />
               </p:NodeReference>
+              <Pin Id="T6yysGFPE6bOqI6WQpj84w" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="ASe56g4u6eKMMBO1EjpfSE" Name="Widget" Kind="InputPin" />
               <Pin Id="AO4pt1rUj8COCyIdrVzghN" Name="Margin" Kind="InputPin" />
               <Pin Id="UmCEmcU6TjKPEkxIk9e9kQ" Name="Padding" Kind="InputPin" />
@@ -48,6 +49,7 @@
                   <p:OuterCategoryReference Kind="Category" Name="Skia" NeedsToBeDirectParent="true" />
                 </CategoryReference>
               </p:NodeReference>
+              <Pin Id="BEAOQ2FQI2GLl7myzl6Pq1" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="TPOgNvrMQJtOBObW8LL1WR" Name="Input" Kind="InputPin" />
               <Pin Id="DqXAWaTU5XDOi2ucWGptZH" Name="Value" Kind="InputPin" />
               <Pin Id="TPDgB3BArRRMBl1E2vmH0s" Name="Output" Kind="OutputPin" />
@@ -57,6 +59,7 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Column" />
               </p:NodeReference>
+              <Pin Id="HZhBNHrAz1bMIr3SrR1wNf" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="K87LZilmR3XPljZ9zwmfh1" Name="Widgets" Kind="InputPin" />
               <Pin Id="VcwLqLr8uljPHNc320zgV1" Name="KeepOriginalWidth" Kind="InputPin" DefaultValue="True">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -70,6 +73,7 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="TextWidget (SingleLine)" />
               </p:NodeReference>
+              <Pin Id="PtAQms6WunqNoyAHQ1HMS6" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="QMTu8h2WW3SOT9Cj9cYasR" Name="Value" Kind="InputPin" />
               <Pin Id="OmWJvl4PZmFOV7iCw3NhPt" Name="Center Ellipsis" Kind="InputPin" />
               <Pin Id="Sk3PbLdwIMUMD5vIblnmHD" Name="Paint" Kind="InputPin" />
@@ -89,6 +93,7 @@
               <Pin Id="FBN7TdYUkZjPwFn7JYcH8o" Name="Font1" Kind="OutputPin" />
               <Pin Id="NJ6psB6yfJqMYQsz7ogQwI" Name="Font2" Kind="OutputPin" />
               <Pin Id="UHh0dmuyNVoNpaBj9rAXdG" Name="Font3" Kind="OutputPin" />
+              <Pin Id="DhOIqes2EKBQaaraVWD3YN" Name="Node Context" Kind="InputPin" IsHidden="true" />
             </Node>
             <Node Bounds="998,494,25,19" Id="BVN5NjpC4zsN1TzS5L1h0D">
               <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
@@ -109,6 +114,7 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="TextWidget (SingleLine)" />
               </p:NodeReference>
+              <Pin Id="E13i7o4cfepOThBoIevpbN" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="FgTBLrKQqK1MU0myxAvtpI" Name="Value" Kind="InputPin" />
               <Pin Id="CnlGMPYBv5fL4awqNJfKDy" Name="Center Ellipsis" Kind="InputPin" />
               <Pin Id="HEsVdRRzCEoLjZAWHi48ah" Name="Paint" Kind="InputPin" />
@@ -130,6 +136,7 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="TextWidget (SingleLine)" />
               </p:NodeReference>
+              <Pin Id="ETF5e8IwhVxO0RtWMnItDS" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="FXIKVKQfGlyPRvN5l7qEHC" Name="Value" Kind="InputPin" />
               <Pin Id="JCqPTBELBqUQaNGpnoR4Lp" Name="Center Ellipsis" Kind="InputPin" />
               <Pin Id="JTNp8u3UtpcPvxlsq0f4nA" Name="Paint" Kind="InputPin" />
@@ -189,6 +196,7 @@
                 <CategoryReference Kind="RecordType" Name="NodeData" NeedsToBeDirectParent="true" />
               </p:NodeReference>
               <Pin Id="KvoGir1oYThORxRDcKdcMy" Name="Input" Kind="StateInputPin" />
+              <Pin Id="QfYChgCAQCmOdazbSugHzS" Name="Output" Kind="OutputPin" IsHidden="true" />
               <Pin Id="CBvnBgSDB75OMm8PGCkz5L" Name="Name" Kind="OutputPin" />
               <Pin Id="FdtyyzkcnNGLsyxdEkVFoc" Name="Shape" Kind="OutputPin" />
               <Pin Id="T1qO6ZsC1J8NyhjBGzWi6l" Name="Element Type" Kind="OutputPin" />
@@ -417,8 +425,8 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="AZiSHnBKVV4LJxDch2D54J" Location="VL.CoreLib" Version="2023.5.2" />
+  <NugetDependency Id="AZiSHnBKVV4LJxDch2D54J" Location="VL.CoreLib" Version="2024.6.6" />
   <DocumentDependency Id="H1UcNgEJcTJPj2FXGp2Ix5" Location="./VL.Onnx.vl" />
-  <NugetDependency Id="Mb8VQ4gMorkPpxqkSFkjYM" Location="VL.HDE" Version="2023.5.2" />
-  <NugetDependency Id="M7UqnKgH5M3NSj96WVnGGI" Location="VL.Skia" Version="2023.5.2" />
+  <NugetDependency Id="Mb8VQ4gMorkPpxqkSFkjYM" Location="VL.HDE" Version="2024.6.6" />
+  <NugetDependency Id="M7UqnKgH5M3NSj96WVnGGI" Location="VL.Skia" Version="2024.6.6" />
 </Document>
